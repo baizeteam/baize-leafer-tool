@@ -24,6 +24,11 @@ const monacoEditor = ref<typeof MonacoEditor>()
 const loading = ref(true)
 const iframeDom = ref<HTMLIFrameElement>()
 const code = ref(`
+class Custom extends Rect {
+  get __tag() { return 'Custom' } // 2. 定义全局唯一的 tag 名称
+}
+Custom.registerUI()
+
 const rect = new Rect({
   x: 100,
   y: 100,
@@ -32,12 +37,15 @@ const rect = new Rect({
   fill: '#32cd79',
   draggable: true,
 })
+const custom = new Custom({ width: 100, height: 200, fill:'blue', draggable: true })
 leafer.add(rect)
+leafer.add(custom)
 `)
 
 const onFrameLoad = () => {
   setTimeout(() => {
     loading.value = false
+    handleChange()
   }, 100)
 }
 

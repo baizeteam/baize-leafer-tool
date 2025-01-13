@@ -3,7 +3,8 @@
 </template>
 
 <script setup lang="ts">
-import { Leafer, Rect } from 'leafer-ui'
+import { Leafer, Rect, UI, registerUI } from 'leafer-ui'
+console.log(Leafer, Rect, UI, registerUI)
 import { ref, onMounted } from 'vue'
 const leaferDom = ref<HTMLDivElement>()
 const _leafer = ref<Leafer>()
