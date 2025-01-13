@@ -39,7 +39,6 @@ const htmlEntities: { [key: string]: string } = {
 };
 
 const escapeHtml = (str: string) => {
-  console.log(str);
   return (
     str?.replace(/[&<>'"`^~—•–?:$]/g, (tag) => htmlEntities[tag] || tag) ?? ''
   );
