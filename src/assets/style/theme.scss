@@ -3,7 +3,8 @@ $primaryRgb: 50, 205, 121;
 :root {
   --el-color-primary: rgb(#{$primaryRgb});
   
-  @for $i from 1 to 9 {
-    --el-color-primary-light-#{$i}: rgba(#{$primaryRgb}, (10 - $i) * 0.1);
+  @for $i from 1 to 10 {
+    $alpha: (10 - $i) * 0.1;
+    --el-color-primary-light-#{$i}: rgba(#{$primaryRgb}, #{$alpha});
   }
 }
