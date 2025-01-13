@@ -28,9 +28,5 @@
     "vite": "^6.0.5",
     "vite-plugin-monaco-editor": "^1.1.0",
     "vue-tsc": "^2.2.0"
-  },
-  "engines": {
-    "node": ">=22.0.0",
-    "pnpm": "^9.0.0"
   }
 }

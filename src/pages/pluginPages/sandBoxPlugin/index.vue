@@ -8,7 +8,7 @@
 
     </div>
     <div class="right" v-loading="loading">
-      <iframe ref="iframeDom" src="/iframe-page" @load="onFrameLoad" />
+      <iframe ref="iframeDom" :src="iframeUrl" @load="onFrameLoad" />
     </div>
 
   </div>
@@ -20,6 +20,12 @@ import { ref } from 'vue'
 import MonacoEditor from '@/components/MonacoEditor.vue'
 
 const monacoEditor = ref<typeof MonacoEditor>()
+const iframeUrl = ref('')
+
+const url = window.location.href;
+const hashIndex = url.indexOf('#'); 
+const contentBeforeHash = hashIndex !== -1 ? url.substring(0, hashIndex) : url;
+iframeUrl.value = contentBeforeHash + '#/iframe-page'
 
 const loading = ref(true)
 const iframeDom = ref<HTMLIFrameElement>()

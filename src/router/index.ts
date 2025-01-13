@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router';
 
 const IframePage = () => import('../pages/IframePage/index.vue');
 const LeaferSpine = () => import('../pages/pluginPages/LeaferSpine/index.vue');
@@ -8,7 +8,7 @@ const sandBoxPlugin = () =>
   import('../pages/pluginPages/sandBoxPlugin/index.vue');
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/base',
