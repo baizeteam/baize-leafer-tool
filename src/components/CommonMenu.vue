@@ -20,8 +20,8 @@
             <span>插件</span>
           </template>
           <el-menu-item route="/plugin/leafer-spine" index="leafer-spine">leafer-spine</el-menu-item>
-          <el-menu-item route="/plugin/sand-box-test" index="sand-box-test">sand-box-test</el-menu-item>
-          <el-menu-item route="/plugin/sand-box-plugin" index="sand-box-plugin">sand-box-plugin</el-menu-item>
+          <!-- <el-menu-item route="/plugin/sand-box-test" index="sand-box-test">sand-box-test</el-menu-item>
+          <el-menu-item route="/plugin/sand-box-plugin" index="sand-box-plugin">sand-box-plugin</el-menu-item> -->
         </el-sub-menu>
       </el-menu>
     </el-col>
